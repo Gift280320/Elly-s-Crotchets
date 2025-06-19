@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elly's Crotchets - Handcrafted with Love</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#e9b3c0',secondary:'#a7d3d4'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+</style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+<!-- Nav Bar -->
+<nav class="fixed top-0 w-full bg-white shadow-sm z-50 px-4 py-3 flex justify-between items-center">
+<div class="flex items-center">
+<img src="https://static.readdy.ai/image/95da97960230979066c40aaa78277f9b/68c4123208f16bd9bae4adee96914da2.jpeg" alt="Elly's Crotchets Logo" class="h-10 w-auto">
+</div>
+<div id="settingsBtn" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full cursor-pointer">
+<i class="ri-settings-3-line ri-lg"></i>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-16 relative">
+<div class="relative w-full h-[300px] overflow-hidden">
+<img src="https://static.readdy.ai/image/95da97960230979066c40aaa78277f9b/e54a5026f7fb292bb63ab755172daaa7.jpeg" alt="Crochet Items" class="w-full h-full object-cover object-top">
+<div class="absolute inset-0 bg-black bg-opacity-20 flex flex-col justify-center items-center text-white p-6">
+<h1 class="text-4xl font-semibold mb-2 text-center">Elly's Crotchets</h1>
+<p class="text-xl mb-8">Handcrafted with Love</p>
+<div class="flex flex-col gap-4 w-full max-w-[250px]">
+<button id="browseCollectionBtn" class="bg-white text-gray-800 py-3 px-6 !rounded-button font-medium shadow-md cursor-pointer">Browse Collection</button>
+<button class="bg-transparent border border-white text-white py-3 px-6 !rounded-button font-medium cursor-pointer">Order on WhatsApp</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="px-4 py-8 bg-gray-50" id="collections">
+<h2 class="text-2xl font-semibold mb-6">Our Collections</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Beanies -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20crochet%20beanies%20in%20various%20colors%20and%20patterns%2C%20detailed%20yarn%20texture%2C%20cozy%20winter%20accessories%2C%20professional%20product%20photography%20on%20white%20background&width=180&height=180&seq=11&orientation=squarish" alt="Beanies" class="w-full h-44 object-cover">
+<div class="p-3">
+<h3 class="text-sm font-medium">Beanies Collection</h3>
+</div>
+</div>
+<!-- Scarves -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+<img src="https://readdy.ai/api/search-image?query=elegant%20crochet%20scarves%20with%20intricate%20patterns%20in%20navy%20blue%20and%20white%2C%20soft%20and%20warm%20texture%2C%20professional%20product%20photography&width=180&height=180&seq=12&orientation=squarish" alt="Scarves" class="w-full h-44 object-cover">
+<div class="p-3">
+<h3 class="text-sm font-medium">Scarves Collection</h3>
+</div>
+</div>
+<!-- Baby Clothes -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+<img src="https://static.readdy.ai/image/95da97960230979066c40aaa78277f9b/5b7801a4c5b1ec9dfb84d72cc8aa6048.jpeg" alt="Baby Clothes" class="w-full h-44 object-cover">
+<div class="p-3">
+<h3 class="text-sm font-medium">Baby Clothes Collection</h3>
+</div>
+</div>
+<!-- Shrugs -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+<img src="https://readdy.ai/api/search-image?query=stylish%20crochet%20shrugs%20in%20modern%20designs%20and%20neutral%20colors%2C%20elegant%20and%20fashionable%2C%20professional%20product%20photography&width=180&height=180&seq=14&orientation=squarish" alt="Shrugs" class="w-full h-44 object-cover">
+<div class="p-3">
+<h3 class="text-sm font-medium">Shrugs Collection</h3>
+</div>
+</div>
+<!-- Sweaters -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+<img src="https://readdy.ai/api/search-image?query=cozy%20crochet%20sweaters%20and%20cardigans%20in%20warm%20earth%20tones%2C%20detailed%20stitch%20patterns%2C%20professional%20product%20photography&width=180&height=180&seq=15&orientation=squarish" alt="Sweaters" class="w-full h-44 object-cover">
+<div class="p-3">
+<h3 class="text-sm font-medium">Sweaters Collection</h3>
+</div>
+</div>
+<!-- Blankets -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+<img src="https://readdy.ai/api/search-image?query=beautiful%20crochet%20blankets%20with%20colorful%20patterns%2C%20soft%20and%20cozy%20texture%2C%20professional%20product%20photography&width=180&height=180&seq=16&orientation=squarish" alt="Blankets" class="w-full h-44 object-cover">
+<div class="p-3">
+<h3 class="text-sm font-medium">Blankets Collection</h3>
+</div>
+</div>
+<!-- Bags -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden col-span-2 cursor-pointer transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20crochet%20bags%20and%20accessories%20in%20trendy%20designs%2C%20practical%20and%20stylish%2C%20professional%20product%20photography&width=375&height=180&seq=17&orientation=landscape" alt="Bags" class="w-full h-44 object-cover">
+<div class="p-3">
+<h3 class="text-sm font-medium">Bags & Accessories Collection</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section class="px-4 py-10" id="products">
+<h2 class="text-3xl font-semibold mb-2">Our Products</h2>
+<p class="text-gray-600 mb-8">Handcrafted with care and attention to detail</p>
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Category 1 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-40 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%20handcrafted%20crochet%20shawls%20and%20scarves%20in%20soft%20pastel%20colors%2C%20detailed%20yarn%20texture%2C%20elegant%20draping%2C%20soft%20lighting%2C%20professional%20product%20photography%20on%20neutral%20background&width=180&height=160&seq=2&orientation=squarish" alt="Shawls & Scarves" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Shawls & Scarves</h3>
+<p class="text-primary text-xs font-medium">From Ksh 750</p>
+</div>
+</div>
+<!-- Product Category 2 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-40 overflow-hidden">
+<img src="https://static.readdy.ai/image/95da97960230979066c40aaa78277f9b/aae3eb8195bd67c3b49ec2d44ce53580.jpeg" alt="Beanies & Hats" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Beanies & Hats</h3>
+<p class="text-primary text-xs font-medium">From Ksh 450</p>
+</div>
+</div>
+<!-- Product Category 3 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-40 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20crochet%20sweaters%20and%20cardigans%20in%20soft%20colors%2C%20detailed%20yarn%20texture%2C%20cozy%20and%20warm%20feeling%2C%20elegant%20design%2C%20soft%20lighting%2C%20professional%20product%20photography%20on%20neutral%20background&width=180&height=160&seq=4&orientation=squarish" alt="Sweaters & Cardigans" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Sweaters & Cardigans</h3>
+<p class="text-primary text-xs font-medium">From Ksh 1200</p>
+</div>
+</div>
+<!-- Product Category 4 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-40 overflow-hidden">
+<img src="https://static.readdy.ai/image/95da97960230979066c40aaa78277f9b/60f12e1e6a44db0994c686bb5e05b8c5.jpeg" alt="Shrugs" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Shrugs</h3>
+<p class="text-primary text-xs font-medium">From Ksh 850</p>
+</div>
+</div>
+<!-- Product Category 5 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer col-span-2">
+<div class="w-full h-40 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20crochet%20bags%20and%20accessories%20in%20stylish%20designs%20and%20colors%2C%20detailed%20yarn%20texture%2C%20fashionable%20and%20practical%2C%20soft%20lighting%2C%20professional%20product%20photography%20on%20neutral%20background&width=375&height=160&seq=6&orientation=landscape" alt="Bags & Accessories" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Bags & Accessories</h3>
+<p class="text-primary text-xs font-medium">From Ksh 800</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="px-4 py-6 bg-gray-50">
+<h2 class="text-2xl font-semibold mb-6">Featured Items</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Featured Item 1 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20baby%20blue%20crochet%20outfit%20set%20with%20hat%2C%20shirt%2C%20and%20booties%20for%20infant%2C%20detailed%20yarn%20texture%2C%20soft%20and%20delicate%2C%20professional%20product%20photography%20on%20white%20background&width=180&height=190&seq=7&orientation=portrait" alt="Baby Set" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Baby Boy Set</h3>
+<p class="text-gray-600 text-xs">Hat, Outfit & Booties</p>
+<p class="text-primary font-medium mt-1">Ksh 1,500</p>
+</div>
+</div>
+<!-- Featured Item 2 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20pink%20crochet%20baby%20dress%20with%20flower%20details%2C%20soft%20and%20delicate%2C%20detailed%20yarn%20texture%2C%20professional%20product%20photography%20on%20white%20background&width=180&height=190&seq=8&orientation=portrait" alt="Baby Dress" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Baby Girl Dress</h3>
+<p class="text-gray-600 text-xs">With Flower Details</p>
+<p class="text-primary font-medium mt-1">Ksh 1,200</p>
+</div>
+</div>
+<!-- Featured Item 3 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20multicolor%20crochet%20blanket%20with%20intricate%20pattern%2C%20soft%20and%20cozy%2C%20detailed%20yarn%20texture%2C%20professional%20product%20photography%20on%20white%20background&width=180&height=190&seq=9&orientation=portrait" alt="Blanket" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Patterned Blanket</h3>
+<p class="text-gray-600 text-xs">Multicolor Design</p>
+<p class="text-primary font-medium mt-1">Ksh 2,500</p>
+</div>
+</div>
+<!-- Featured Item 4 -->
+<div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+<div class="w-full h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=handcrafted%20crochet%20tote%20bag%20in%20beige%20color%20with%20decorative%20pattern%2C%20practical%20and%20stylish%2C%20detailed%20yarn%20texture%2C%20professional%20product%20photography%20on%20white%20background&width=180&height=190&seq=10&orientation=portrait" alt="Tote Bag" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-3">
+<h3 class="font-medium text-sm">Beige Tote Bag</h3>
+<p class="text-gray-600 text-xs">Decorative Pattern</p>
+<p class="text-primary font-medium mt-1">Ksh 1,800</p>
+</div>
+</div>
+</div>
+<div class="mt-6 text-center">
+<button class="bg-primary text-white py-3 px-6 !rounded-button font-medium shadow-sm cursor-pointer">View All Products</button>
+</div>
+</section>
+<!-- About Section -->
+<section class="px-4 py-10 bg-white">
+<h2 class="text-3xl font-semibold mb-6">About Us</h2>
+<div class="mb-8">
+<p class="text-gray-600 mb-4">At Elly's Crotchets, we pour our heart into every stitch. Each piece is carefully handcrafted using premium materials, bringing warmth and style to your everyday life.</p>
+<p class="text-gray-600">Our passion for crochet translates into unique, high-quality pieces that you'll treasure for years to come. We take pride in our craftsmanship and attention to detail.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+<i class="ri-heart-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-medium text-sm">Handmade with Love</h3>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+<i class="ri-award-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-medium text-sm">Premium Materials</h3>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+<i class="ri-paint-brush-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-medium text-sm">Custom Orders Welcome</h3>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg text-center">
+<div class="w-12 h-12 mx-auto mb-2 flex items-center justify-center">
+<i class="ri-home-heart-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-medium text-sm">Local Craftsmanship</h3>
+</div>
+</div>
+</section>
+<!-- Favorites Section -->
+<section id="favorites" class="px-4 py-10 bg-gray-50 hidden">
+<h2 class="text-3xl font-semibold mb-6">Our Favorites</h2>
+<div class="columns-2 gap-4">
+<!-- Additional Beanies -->
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=trendy%20crochet%20beanie%20for%20teenagers%2C%20modern%20design%20in%20vibrant%20colors%2C%20soft%20yarn%20texture%2C%20styled%20photography%2C%20high%20quality%20details&width=180&height=240&seq=28&orientation=portrait" alt="Teen Beanie" class="w-full rounded-lg">
+<p class="text-sm mt-2">Modern Teen Beanie</p>
+</div>
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=cozy%20winter%20beanie%20with%20cable%20pattern%2C%20warm%20and%20stylish%2C%20soft%20yarn%20texture%2C%20lifestyle%20photography%2C%20high%20quality%20details&width=180&height=240&seq=29&orientation=portrait" alt="Cable Beanie" class="w-full rounded-lg">
+<p class="text-sm mt-2">Cable Knit Beanie</p>
+</div>
+<!-- Scarves -->
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=elegant%20crochet%20infinity%20scarf%20with%20delicate%20pattern%2C%20soft%20and%20cozy%2C%20detailed%20yarn%20texture%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=30&orientation=portrait" alt="Infinity Scarf" class="w-full rounded-lg">
+<p class="text-sm mt-2">Elegant Infinity Scarf</p>
+</div>
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=chunky%20crochet%20winter%20scarf%20in%20neutral%20tones%2C%20warm%20and%20fashionable%2C%20soft%20yarn%20texture%2C%20lifestyle%20photography%2C%20high%20quality%20details&width=180&height=240&seq=31&orientation=portrait" alt="Chunky Scarf" class="w-full rounded-lg">
+<p class="text-sm mt-2">Chunky Winter Scarf</p>
+</div>
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=lacy%20crochet%20summer%20scarf%20in%20pastel%20colors%2C%20light%20and%20airy%2C%20delicate%20pattern%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=32&orientation=portrait" alt="Summer Scarf" class="w-full rounded-lg">
+<p class="text-sm mt-2">Lacy Summer Scarf</p>
+</div>
+<!-- Shrugs -->
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=elegant%20crochet%20shrug%20in%20cream%20color%2C%20delicate%20pattern%2C%20soft%20yarn%20texture%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=33&orientation=portrait" alt="Cream Shrug" class="w-full rounded-lg">
+<p class="text-sm mt-2">Elegant Cream Shrug</p>
+</div>
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=boho%20style%20crochet%20shrug%20with%20fringe%20details%2C%20stylish%20and%20comfortable%2C%20soft%20yarn%20texture%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=34&orientation=portrait" alt="Boho Shrug" class="w-full rounded-lg">
+<p class="text-sm mt-2">Boho Fringe Shrug</p>
+</div>
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=modern%20crochet%20shrug%20with%20geometric%20pattern%2C%20contemporary%20design%2C%20soft%20yarn%20texture%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=35&orientation=portrait" alt="Modern Shrug" class="w-full rounded-lg">
+<p class="text-sm mt-2">Modern Geometric Shrug</p>
+</div>
+<!-- Sweaters -->
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=cozy%20crochet%20pullover%20sweater%20in%20earth%20tones%2C%20chunky%20texture%2C%20warm%20and%20stylish%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=36&orientation=portrait" alt="Pullover Sweater" class="w-full rounded-lg">
+<p class="text-sm mt-2">Cozy Pullover Sweater</p>
+</div>
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=cropped%20crochet%20sweater%20with%20modern%20pattern%2C%20trendy%20and%20chic%2C%20soft%20yarn%20texture%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=37&orientation=portrait" alt="Cropped Sweater" class="w-full rounded-lg">
+<p class="text-sm mt-2">Trendy Cropped Sweater</p>
+</div>
+<div class="mb-4 break-inside-avoid">
+<img src="https://readdy.ai/api/search-image?query=oversized%20crochet%20cardigan%20sweater%2C%20casual%20and%20comfortable%2C%20soft%20yarn%20texture%2C%20fashion%20photography%2C%20high%20quality%20details&width=180&height=240&seq=38&orientation=portrait" alt="Cardigan Sweater" class="w-full rounded-lg">
+<p class="text-sm mt-2">Oversized Cardigan</p>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-4 py-10 bg-gray-50">
+<h2 class="text-3xl font-semibold mb-6">Contact Us</h2>
+<div class="bg-white p-5 rounded-lg shadow-sm mb-6">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-whatsapp-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="font-medium text-sm">WhatsApp</h3>
+<a href="https://wa.me/254742939506" class="text-primary text-sm">+254 742 939 506</a>
+</div>
+</div>
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-mail-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="font-medium text-sm">Email</h3>
+<a href="mailto:elsenkemboi@gmail.com" class="text-primary text-sm">elsenkemboi@gmail.com</a>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-tiktok-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="font-medium text-sm">TikTok</h3>
+<a href="https://vm.tiktok.com/ZMSajVXrm/" class="text-primary text-sm">@ellyscrotchets</a>
+</div>
+</div>
+</div>
+<div class="bg-white p-5 rounded-lg shadow-sm">
+<h3 class="font-medium mb-4">Send us a message</h3>
+<form action="" method="POST">
+<div class="mb-4">
+<label class="block text-gray-600 text-sm mb-1" for="name">Your Name</label>
+<input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-200 rounded-button focus:outline-none focus:border-primary" placeholder="Enter your name">
+</div>
+<div class="mb-4">
+<label class="block text-gray-600 text-sm mb-1" for="email">Email Address</label>
+<input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-200 rounded-button focus:outline-none focus:border-primary" placeholder="Enter your email">
+</div>
+<div class="mb-4">
+<label class="block text-gray-600 text-sm mb-1" for="message">Message</label>
+<textarea id="message" name="message" rows="4" required maxlength="500" class="w-full px-3 py-2 border border-gray-200 rounded-button focus:outline-none focus:border-primary" placeholder="How can we help you?"></textarea>
+<div class="text-xs text-gray-500 mt-1">
+<span id="charCount">0</span>/500 characters
+</div>
+</div>
+<button type="submit" class="w-full bg-primary text-white py-3 px-6 !rounded-button font-medium shadow-sm cursor-pointer">Send Message</button>
+</form>
+</div>
+</section>
+<!-- Tab Bar -->
+<nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 z-50">
+<div class="grid grid-cols-3 h-16">
+<a href="#" class="flex flex-col items-center justify-center text-primary">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-5-line ri-lg"></i>
+</div>
+<span class="text-xs mt-1">Home</span>
+</a>
+<a href="#products" class="flex flex-col items-center justify-center text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-shopping-bag-line ri-lg"></i>
+</div>
+<span class="text-xs mt-1">Products</span>
+</a>
+<a href="#favorites" class="flex flex-col items-center justify-center text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-heart-line ri-lg"></i>
+</div>
+<span class="text-xs mt-1">Favorites</span>
+</a>
+</div>
+</nav>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/254742939506" class="fixed bottom-20 right-4 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg z-50 cursor-pointer">
+<i class="ri-whatsapp-line ri-2x text-white"></i>
+</a>
+<script id="settings-script">
+document.addEventListener('DOMContentLoaded', function() {
+const settingsBtn = document.getElementById('settingsBtn');
+settingsBtn.addEventListener('click', function() {
+const modal = document.createElement('div');
+modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+modal.innerHTML = `
+<div class="bg-white p-6 rounded-lg max-w-sm w-full mx-4">
+<h3 class="text-xl font-medium mb-4">Settings</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-gray-600">Dark Mode</span>
+<button class="w-12 h-6 bg-gray-200 rounded-full relative" disabled>
+<span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full"></span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-gray-600">Notifications</span>
+<button class="w-12 h-6 bg-gray-200 rounded-full relative" disabled>
+<span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full"></span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-gray-600">Language</span>
+<select class="border border-gray-200 rounded-button px-2 py-1" disabled>
+<option>English</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-2 px-4 !rounded-button mt-6">Close</button>
+</div>
+`;
+document.body.appendChild(modal);
+modal.querySelector('button:last-child').addEventListener('click', function() {
+document.body.removeChild(modal);
+});
+modal.addEventListener('click', function(e) {
+if (e.target === modal) {
+document.body.removeChild(modal);
+}
+});
+});
+});
+</script>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const browseCollectionBtn = document.getElementById('browseCollectionBtn');
+const collectionsSection = document.getElementById('collections');
+browseCollectionBtn.addEventListener('click', function() {
+const navbarHeight = 60;
+const offsetTop = collectionsSection.offsetTop - navbarHeight;
+window.scrollTo({
+top: offsetTop,
+behavior: 'smooth'
+});
+});
+const collectionItems = collectionsSection.querySelectorAll('.grid > div');
+collectionItems.forEach(item => {
+item.addEventListener('click', function() {
+const collectionName = this.querySelector('h3').textContent;
+const modal = document.createElement('div');
+modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+modal.innerHTML = `
+<div class="bg-white p-6 rounded-lg max-w-sm w-full mx-4">
+<h3 class="text-xl font-medium mb-2">${collectionName}</h3>
+<p class="text-gray-600 mb-4">Coming soon! This collection page is under construction.</p>
+<button class="w-full bg-primary text-white py-2 px-4 !rounded-button">Close</button>
+</div>
+`;
+document.body.appendChild(modal);
+modal.querySelector('button').addEventListener('click', function() {
+document.body.removeChild(modal);
+});
+modal.addEventListener('click', function(e) {
+if (e.target === modal) {
+document.body.removeChild(modal);
+}
+});
+});
+});
+const productLinks = document.querySelectorAll('a[href="#products"]');
+const favoritesLink = document.querySelector('a[href="#favorites"]');
+const favoritesSection = document.getElementById('favorites');
+const productsSection = document.getElementById('products');
+productLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const navbarHeight = 60;
+const offsetTop = productsSection.offsetTop - navbarHeight;
+window.scrollTo({
+top: offsetTop,
+behavior: 'smooth'
+});
+favoritesSection.classList.add('hidden');
+productsSection.classList.remove('hidden');
+});
+});
+favoritesLink.addEventListener('click', function(e) {
+e.preventDefault();
+const navbarHeight = 60;
+const offsetTop = favoritesSection.offsetTop - navbarHeight;
+window.scrollTo({
+top: offsetTop,
+behavior: 'smooth'
+});
+productsSection.classList.add('hidden');
+favoritesSection.classList.remove('hidden');
+});
+});
+</script>
+<script id="whatsapp-order-script">
+document.addEventListener('DOMContentLoaded', function() {
+const whatsappOrderBtn = document.querySelector('button:nth-child(2)');
+const whatsappFloatingBtn = document.querySelector('a[href="https://wa.me/254742939506"]');
+[whatsappOrderBtn, whatsappFloatingBtn].forEach(btn => {
+btn.addEventListener('click', function(e) {
+e.preventDefault();
+window.open('https://wa.me/254742939506', '_blank');
+});
+});
+});
+</script>
+<script id="form-submit-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.querySelector('form');
+const messageInput = document.getElementById('message');
+const charCount = document.getElementById('charCount');
+messageInput.addEventListener('input', function() {
+const currentLength = this.value.length;
+charCount.textContent = currentLength;
+if (currentLength > 500) {
+this.value = this.value.substring(0, 500);
+charCount.textContent = 500;
+}
+});
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(this);
+const data = {};
+formData.forEach((value, key) => data[key] = value);
+fetch(contactForm.action, {
+method: 'POST',
+headers: {
+'Content-Type': 'application/x-www-form-urlencoded',
+},
+body: new URLSearchParams(data)
+})
+.then(response => {
+const successMsg = document.createElement('div');
+successMsg.className = 'bg-green-100 text-green-700 p-3 rounded-lg mt-3';
+successMsg.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+const existingMsg = contactForm.querySelector('.bg-red-100, .bg-green-100');
+if (existingMsg) {
+contactForm.removeChild(existingMsg);
+}
+contactForm.appendChild(successMsg);
+contactForm.reset();
+charCount.textContent = '0';
+setTimeout(() => {
+if (successMsg.parentNode === contactForm) {
+contactForm.removeChild(successMsg);
+}
+}, 3000);
+})
+.catch(error => {
+const errorMsg = document.createElement('div');
+errorMsg.className = 'bg-red-100 text-red-700 p-3 rounded-lg mt-3';
+errorMsg.textContent = 'There was an error sending your message. Please try again.';
+const existingMsg = contactForm.querySelector('.bg-red-100, .bg-green-100');
+if (existingMsg) {
+contactForm.removeChild(existingMsg);
+}
+contactForm.appendChild(errorMsg);
+});
+});
+});
+</script>
+</body>
+</html>
